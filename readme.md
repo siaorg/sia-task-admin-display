@@ -1,5 +1,4 @@
 # 前言
-
 该项目基于node环境运行，如未安装node，请先安装node
 
 传送门：https://nodejs.org/en/download/
@@ -17,4 +16,6 @@ npm run build
 
 ###### 注：可以更改dist/static文件夹下面的site.map.js文件进行环境的配置（ip：port形式）
 
-CESHI_API_HOST -> 后端服务地址
+1、CESHI_API_HOST -> 后端服务地址
+
+2、CESHI_API_HOST_LOG -> kabana 日志连接地址

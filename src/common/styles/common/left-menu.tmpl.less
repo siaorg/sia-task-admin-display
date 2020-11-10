@@ -1,0 +1,167 @@
+@import './../global.less';
+
+.left-menu.active {
+  width: 70px;
+
+  .el-menu--collapse {
+    width: 100%;
+  }
+}
+
+.left-menu {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 180px;
+  height: 100%;
+  background-color: @default-left-menu-background;
+
+  .logo {
+    user-select: none;
+    user-select: none;
+    color: @default-left-menu-font-hover-color;
+    padding-top: 10px;
+    // line-height: 55px;
+    min-height: 55px;
+    background: @default-left-menu-logo-background;
+    font-size: 18px;
+    padding-left: 10px;
+    cursor: pointer;
+
+    .group {
+      font-size: 14px;
+      color: #a9b4da;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-right: 5px;
+      text-align: center;
+      strong {
+        font-weight: normal;
+      }
+    }
+
+    span {
+      vertical-align: middle;
+
+      &:nth-child(1) {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background: url('../../images/logo.png') no-repeat;
+        background-size: contain;
+        border-radius: 100%;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .el-menu {
+    background-color: transparent;
+    border: none;
+
+    .el-icon-arrow-down:before {
+      content: "\E60B";
+      color: @default-left-menu-font-color;
+    }
+
+    .el-submenu__title,
+    .el-menu-item {
+      // border-left: 1px solid  @default-left-menu-background;
+      height: 38px;
+      line-height: 38px;
+      margin-bottom: 5px;
+      color: @default-left-menu-font-color;
+
+      // font-weight: 600;
+      &:nth-child(1) {
+        margin-top: 10px;
+      }
+    }
+
+    .el-submenu__title:hover,
+    .el-menu-item:focus,
+    .el-menu-item:hover {
+      width: 100%;
+      box-sizing: border-box;
+      background-color: @default-left-menu-hover-background;
+      color: @default-left-menu-font-hover-color;
+
+      .el-icon-arrow-down:before {
+        color: @default-left-menu-font-hover-color;
+        right: 20px;
+      }
+    }
+
+    .el-menu-item.is-active {
+      background-color: @default-left-menu-hover-background;
+      color: @default-left-menu-font-hover-color  !important;
+    }
+
+    ul.el-menu {
+      li.is-active {
+        background-color: @default-left-menu-hover-background;
+        color: @default-left-menu-font-hover-color  !important;
+      }
+    }
+  }
+
+  .el-menu-vertical>li,
+  .el-menu-vertical>li>.el-submenu__title {
+    text-indent: 10px;
+
+    i {
+      text-indent: 0;
+    }
+  }
+
+  .el-menu-vertical>li:before {
+    margin-top: 12px;
+    float: left;
+    content: " ";
+    width: 18px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .el-menu-vertical>li.home:before {
+    background-image: url('../../images/home.png');
+  }
+
+  .el-menu-vertical>li.dispatch-manage:before {
+    background-image: url('../../images/dispatch.png');
+  }
+
+  .el-menu-vertical>li.monitor-manage:before {
+    background-image: url('../../images/monitor-icon.png');
+  }
+
+  .el-menu-vertical>li.task-manage-list:before {
+    background-image: url('../../images/task_manage.png');
+  }
+
+  .el-menu-vertical>li.job-manage-list:before {
+    background-image: url('../../images/job.png');
+  }
+
+  .el-menu-vertical>li.task-log-list:before {
+    background-image: url('../../images/log.png');
+  }
+
+  .el-menu-vertical>li.log-list-kibana:before {
+    background-image: url('../../images/log.png');
+  }
+
+  .el-menu-vertical>li.zk-manage:before {
+    background-image: url('../../images/zk-icon.png');
+  }
+
+  .el-menu-vertical>li.user-home:before {
+    background-image: url('../../images/admin.svg');
+  }
+
+  .el-menu-vertical>li.admin-home:before {
+    background-image: url('../../images/admin01.svg');
+  }
+
+}

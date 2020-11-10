@@ -1,0 +1,104 @@
+@import '../../common/styles/global';
+.zk-manage-page {
+  width: 100%;
+  height: calc(~"100% - 55px");
+  .section-container {
+    display: flex;
+    flex-direction: row !important;
+    .left-box {
+      position: relative;
+      height: 100%;
+      width: 380px;
+      padding: 30px 15px 20px;
+      border-right: 1px solid #E4ECF2;
+      background: @default-section-background;
+      overflow: auto;
+      .left-border {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 32px;
+        height: 32px;
+        background: url('../images/drop-icon.png') no-repeat center center;
+        &:hover {
+          cursor: auto;
+        }
+      }
+      .refresh {
+        position: absolute;
+        top: 6px;
+        right: 32px;
+        font-size: 22px;
+        color: #AAB5DB;
+        cursor: pointer;
+      }
+      .refresh.refresh-active{
+        /*animation (动画) :绑定选择器, 4s完成动画 linear(匀速) infinite(循环) */
+        animation: que 2s linear infinite;
+      }
+      @keyframes que {
+        /*以百分比来规定改变发生的时间 也可以通过"from"和"to",等价于0% 和 100%*/
+        from {
+          -webkit-transform: rotate(0deg);
+        }
+        to {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+    }
+    .right-box {
+      // flex: 1;
+      margin-left: 10px;
+      // height: calc(~'100% - 20px');
+      width: calc(~'100% - 395px');
+      background: @default-section-background;
+      overflow-x: auto;
+      .node-info {
+        height: calc(~'100% - 95px');
+        margin: 35px auto 0;
+        max-width: 580px;
+        min-width: 280px;
+        padding: 0 15px;
+        p {
+          display: flex;
+          margin-bottom: 10px;
+          span {
+            &:nth-child(1) {
+              width: 130px;
+              color: #4A4A4A;
+              text-align: right;
+              vertical-align: middle;
+              font-size: 14px;
+              -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+              height: 32px;
+              line-height: 32px;
+            }
+            &:nth-child(2) {
+              width: calc(~'100% - 175px');
+              height: 32px;
+              line-height: 32px;
+              margin-right: 3px;
+              background-color: #f5f7fa;
+              border: #e4e7ed 1px solid;
+              color: #9B9B9B;
+              padding-left: 10px;
+            }
+          }
+          .item {
+            cursor: pointer;
+            width: 35px;
+            color: #D3D3D3;
+            font-size: 18px;
+            line-height: 33px;
+            text-align: center;
+          }
+        }
+      }
+      .node-data {
+        text-align: center;
+        margin-top: 30px;
+      }
+    }
+  }
+}
